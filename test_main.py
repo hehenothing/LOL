@@ -1,26 +1,15 @@
 import unittest
 import main
-from circle import circle_area
-from math import pi
-
-class TestCircleArea(unittest.TestCase):
-
-    def test_area(self):
-        self.assertEqual(main.circle_area(3),pi*3**2)
-        self.assertEqual(main.circle_area(1),pi)
-        self.assertEqual(main.circle_area(0),0)
-        self.assertEqual(main.circle_area(2.5),pi*2.5**2)
-
-
-    def test_values(self):
-        self.assertRaises(ValueError,main.circle_area,-2)
-        self.assertRaises(ValueError,main.circle_area,-1)
-
-
-
-    def test_types(self):
-        self.assertRaises(TypeError, main.circle_area, 5 + 2j)
-        self.assertRaises(TypeError, main.circle_area, 'five')
-        self.assertRaises(TypeError, main.circle_area, [16, 22])
-        self.assertRaises(TypeError, main.circle_area, [42])
-        self.assertRaises(TypeError, main.circle_area, True)
+ 
+class CalcTest(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(main.add(1, 2), 3)
+        
+    def test_sub(self):
+        self.assertEqual(main.sub(4, 2), 2)
+        
+    def test_mul(self):
+        self.assertEqual(main.mul(2, 5), 10)
+        
+    def test_div(self):
+        self.assertEqual(main.div(8, 4), 2)
